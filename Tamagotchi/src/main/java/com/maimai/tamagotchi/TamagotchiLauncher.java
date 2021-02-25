@@ -1,18 +1,11 @@
 package com.maimai.tamagotchi;
 
+import com.maimai.tamagotchi.module.Module;
+import com.maimai.tamagotchi.module.IModule;
+
 public class TamagotchiLauncher {
-
-    /*Logger logger = LogManager.getLogger(Tamagotchi.class);
-        logger.info("Test");
-         String[] wolf = new String[]{
-                " )      (\\_",
-                "((    _/{  \"-;",
-                " )).-' {{ ;'`",
-                "( (  ;._ \\\\",
-        };
-        */
-
     public static void main(String[] args) {
-
+        IModule module = new Module();
+        module.start();
     }
 }
