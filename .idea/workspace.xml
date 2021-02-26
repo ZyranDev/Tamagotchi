@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2fda21f6-0153-4edf-9a82-2d1f090d5483" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/loaders/Loader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/services/LoaderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/services/MainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/services/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/services/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/storage/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/storage/connections/sql/MySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/storage/connections/sql/SQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/storage/connections/sql/SQLStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/utils/Callback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/utils/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/utils/JsonFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/utils/console/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/utils/scheduler/CraftScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/utils/scheduler/Scheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/utils/scheduler/SchedulerTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/TamagotchiLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/TamagotchiLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/entities/MascotEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/entities/MascotEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/managers/MascotManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/managers/MascotManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/managers/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/src/main/java/com/maimai/tamagotchi/managers/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/target/classes/com/maimai/tamagotchi/TamagotchiLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/target/classes/com/maimai/tamagotchi/TamagotchiLauncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/target/classes/com/maimai/tamagotchi/entities/MascotEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/target/classes/com/maimai/tamagotchi/entities/MascotEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tamagotchi/target/classes/com/maimai/tamagotchi/entities/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tamagotchi/target/classes/com/maimai/tamagotchi/entities/UserEntity.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oxKOtSE4uZAZOvwXCyiU6SWvXg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tamagotchi/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\equin\IdeaProjects\Tamagotchi\Tamagotchi\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="git" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TamagotchiLauncher">
+    <configuration name="Tamagotchi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.maimai.tamagotchi.Tamagotchi" />
+      <module name="Tamagotchi (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.maimai.tamagotchi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TamagotchiLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.maimai.tamagotchi.TamagotchiLauncher" />
+      <module name="Tamagotchi (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.maimai.tamagotchi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tamagotchi" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Tamagotchi" />
+      <item itemvalue="Application.TamagotchiLauncher" />
+      <item itemvalue="Maven.Tamagotchi" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TamagotchiLauncher" />
+        <item itemvalue="Application.Tamagotchi" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2fda21f6-0153-4edf-9a82-2d1f090d5483" name="Default Changelist" comment="" />
+      <created>1614222775279</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614222775279</updated>
+      <workItem from="1614222778362" duration="363000" />
+      <workItem from="1614223218421" duration="3432000" />
+      <workItem from="1614227053200" duration="997000" />
+      <workItem from="1614229652286" duration="28000" />
+      <workItem from="1614294208979" duration="1968000" />
+      <workItem from="1614296459383" duration="2574000" />
+      <workItem from="1614306727780" duration="10000" />
+      <workItem from="1614367976079" duration="1944000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
