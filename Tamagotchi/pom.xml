@@ -70,6 +70,12 @@
             <version>2.12.1</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.maimai.tamagotchi</groupId>
+            <artifactId>API</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>
