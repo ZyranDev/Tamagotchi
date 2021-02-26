@@ -9,7 +9,9 @@ import java.util.UUID;
 public class UserManager extends Cache<UUID, UserEntity> {
 
     public UserEntity createUser(String displayName) {
-        return new UserEntity(displayName);
+        UserEntity userEntity = new UserEntity(displayName);
+        addUser(userEntity);
+        return userEntity;
     }
 
     private Optional<UserEntity> getUserByDisplayName(String displayName) {

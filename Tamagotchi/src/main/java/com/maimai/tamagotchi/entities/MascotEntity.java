@@ -9,14 +9,9 @@ import java.util.UUID;
 @Setter
 public class MascotEntity {
 
-    public enum MascotState {
-        ALIVE, DEATH
-    }
-
     private final UUID uuid;
     private final String name, type;
-    private MascotState state;
-    private UserEntity owner;
+    private UUID ownerID;
     private int age;
     private double health, hunger;
 
@@ -26,6 +21,14 @@ public class MascotEntity {
         this.uuid = UUID.randomUUID();
         this.health = 100.0;
         this.hunger = 100.0;
+    }
+
+    public boolean isHungry() {
+        return hunger < 20.0;
+    }
+
+    public boolean isDamaged() {
+        return health < 20.0;
     }
 
     public void displayInfo() {

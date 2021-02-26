@@ -1,18 +1,22 @@
 package com.maimai.tamagotchi;
 
+import com.maimai.tamagotchi.managers.ContainerManager;
+import com.maimai.tamagotchi.utils.console.Console;
+
 public class TamagotchiLauncher {
 
-    /*Logger logger = LogManager.getLogger(Tamagotchi.class);
-        logger.info("Test");
-         String[] wolf = new String[]{
-                " )      (\\_",
-                "((    _/{  \"-;",
-                " )).-' {{ ;'`",
-                "( (  ;._ \\\\",
-        };
-        */
+    private static ContainerManager containerManager;
+
+    public TamagotchiLauncher() {
+        containerManager = new ContainerManager();
+        containerManager.addInstance(Console.class);
+    }
 
     public static void main(String[] args) {
+        new TamagotchiLauncher();
+    }
 
+    public static <T> T getInstance(Class<?> clazz) {
+        return containerManager.getInstance(clazz);
     }
 }
