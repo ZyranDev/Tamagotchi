@@ -1,19 +1,25 @@
 package com.maimai.tamagotchi.utils.console;
 
-public class Colors {
+public enum Colors {
 
-    public String black = "\033[30m";
-    public String red = "\033[31m";
-    public String green = "\033[32m";
-    public String yellow = "\033[33m";
-    public String blue = "\033[34m";
-    public String purple = "\033[35m";
-    public String cyan = "\033[36m";
-    public String white = "\033[37m";
-    public String reset = "\u001B[0m";
+    BLACK("\033[30m"),
+    RED("\033[31m"),
+    GREEN("\033[32m"),
+    YELLOW("\033[33m"),
+    BLUE("\033[34m"),
+    PURPLE("\033[35m"),
+    CYAN("\033[36m"),
+    WHITE("\033[37m"),
+    RESET("\u001B[0m");
 
-    public Colors(){
+    private String id;
 
+    public String getId() {
+        return id;
+    }
+
+    Colors(String id) {
+        this.id = id;
     }
 
 }
