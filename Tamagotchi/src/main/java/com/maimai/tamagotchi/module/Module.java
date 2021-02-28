@@ -1,6 +1,7 @@
 package com.maimai.tamagotchi.module;
 
 public class Module implements IModule {
+
     public void start() {
 
         /*String[] wolf = new String[]{
