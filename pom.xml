@@ -57,8 +57,6 @@
     <modules>
         <module>Features</module>
         <module>Tamagotchi</module>
-        <module>Api</module>
-        <module>API</module>
         <module>API</module>
     </modules>
 

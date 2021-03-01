@@ -3,20 +3,18 @@ package com.maimai.tamagotchi.entities;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Getter@Setter
 public class UserEntity {
 
     private final UUID uuid;
     private String displayName;
-    private Map<String, MascotEntity> mascots;
+    private Set<UUID> mascots;
 
     public UserEntity(String displayName) {
         this.displayName = displayName;
         this.uuid = UUID.randomUUID();
-        this.mascots = new HashMap<>();
+        this.mascots = new HashSet<>();
     }
 }
