@@ -27,14 +27,14 @@ public class Menu {
         int option = input.nextInt();
 
         if (option == 1) {
-            System.out.println("Seleccionaste la opción 1");
+            System.out.println("Seleccionaste la opción 1, test");
 
         } else if (option == 2) {
-            System.out.println("Seleccionaste la opción 2");
+            System.out.println("Seleccionaste la opción 2, test");
 
         } else if (option == 3) {
 
-            System.out.println("Seleccionaste la opción 3");
+            System.out.println("Seleccionaste la opción 3, test");
         }else{
             System.out.println("Ingresa una opción correcta.");
             displayMainMenu();

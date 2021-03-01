@@ -10,7 +10,6 @@ public class UserLog {
 
     Scanner input = new Scanner(System.in);
     Menu menu = new Menu();
-    Colors color = new Colors();
     UserManager userManager = new UserManager();
 
 
