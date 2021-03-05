@@ -10,9 +10,9 @@ public class MySQLConnection implements ISQLConnection {
     private Connection connection;
 
     private final String host, database, user, password;
-    private final int port;
+    private final Short port;
 
-    public MySQLConnection(String host, String database, String user, String password, int port) {
+    public MySQLConnection(String host, String database, String user, String password, Short port) {
         this.host = host;
         this.database = database;
         this.user = user;

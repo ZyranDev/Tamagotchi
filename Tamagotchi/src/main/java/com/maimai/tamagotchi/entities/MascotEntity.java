@@ -12,7 +12,7 @@ public class MascotEntity {
     private final UUID uuid;
     private final String name, type;
     private UUID ownerID;
-    private int age;
+    private byte age;
     private double health, hunger;
 
     public MascotEntity(String name, String type) {
