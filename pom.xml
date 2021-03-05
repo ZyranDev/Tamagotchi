@@ -55,9 +55,7 @@
     </dependencies>
 
     <modules>
-        <module>Features</module>
         <module>Tamagotchi</module>
-        <module>API</module>
     </modules>
 
 </project>

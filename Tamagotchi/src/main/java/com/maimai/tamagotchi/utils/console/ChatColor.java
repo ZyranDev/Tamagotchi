@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.utils;
+package com.maimai.tamagotchi.utils.console;
 
 import lombok.Getter;
 
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 @Getter
 public enum ChatColor {
     BLACK('0', "\u001B[30m"),
-    BLUE('9', "\033[34m"),
+    BLUE('1', "\033[34m"),
     GREEN('a', "\u001B[32m"),
     AQUA('b', "\033[36m"),
     RED('c', "\u001B[31m"),
