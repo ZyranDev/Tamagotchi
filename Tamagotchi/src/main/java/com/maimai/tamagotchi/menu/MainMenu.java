@@ -40,7 +40,7 @@ public class MainMenu implements IMenu {
         menuItems.replaceAll(ChatColor::translateColorCodes);
         menuItems.forEach(System.out::println);
 
-        int option = scanner.nextInt();
+        byte option = scanner.nextByte();
         switch (option) {
             case 1:
                 System.out.println("Here, you will be able to choose a pet if you are logged in and have one, obviously");
