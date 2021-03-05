@@ -1,12 +1,13 @@
 package com.maimai.tamagotchi.services;
 
-import com.maimai.tamagotchi.loaders.Loader;
+import com.maimai.tamagotchi.api.loader.ILoader;
+import com.maimai.tamagotchi.api.service.IService;
 import org.reflections.Reflections;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class LoaderService implements Service {
+public class LoaderService implements IService {
 
     /*
      * According to me, this class is unnecessary in addition to being a bit poorly optimized by the theme
@@ -16,12 +17,12 @@ public class LoaderService implements Service {
      * if it is possible to eliminate this class, I do not do it without consulting others.
      */
 
-    private final Set<Loader> services;
+    private final Set<ILoader> services;
 
     public LoaderService() {
         services = new HashSet<>();
         Reflections reflections = new Reflections("com.maimai.tamagotchi.services");
-        reflections.getSubTypesOf(Loader.class).forEach(loaderClass -> {
+        reflections.getSubTypesOf(ILoader.class).forEach(loaderClass -> {
             try {
                 services.add(loaderClass.newInstance());
             } catch (InstantiationException | IllegalAccessException e) {
@@ -32,11 +33,11 @@ public class LoaderService implements Service {
 
     @Override
     public void start() {
-        services.forEach(Loader::load);
+        services.forEach(ILoader::load);
     }
 
     @Override
     public void stop() {
-        services.forEach(Loader::load);
+        services.forEach(ILoader::load);
     }
 }

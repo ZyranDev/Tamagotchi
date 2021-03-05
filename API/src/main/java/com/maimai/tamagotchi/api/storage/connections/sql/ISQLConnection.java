@@ -1,9 +1,8 @@
-package com.maimai.tamagotchi.storage.connections.sql;
+package com.maimai.tamagotchi.api.storage.connections.sql;
 
 import java.sql.Connection;
 
-public interface SQLConnection {
-
+public interface ISQLConnection {
     Connection getConnection();
 
     void createConnection();

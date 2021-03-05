@@ -1,18 +1,19 @@
 package com.maimai.tamagotchi.storage.connections.sql;
 
+import com.maimai.tamagotchi.api.storage.IStorage;
+import com.maimai.tamagotchi.api.storage.connections.sql.ISQLConnection;
 import com.maimai.tamagotchi.entities.UserEntity;
-import com.maimai.tamagotchi.storage.Storage;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.UUID;
 
-public class SQLStorage implements Storage {
+public class SQLStorage implements IStorage {
 
-    private final SQLConnection sqlConnection;
+    private final ISQLConnection sqlConnection;
 
-    public SQLStorage(SQLConnection sqlConnection) {
+    public SQLStorage(ISQLConnection sqlConnection) {
         this.sqlConnection = sqlConnection;
         createTable();
     }

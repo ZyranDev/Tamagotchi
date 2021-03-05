@@ -1,5 +1,6 @@
 package com.maimai.tamagotchi.services;
 
+import com.maimai.tamagotchi.api.service.IService;
 import org.reflections.Reflections;
 
 import java.util.HashSet;
@@ -15,12 +16,12 @@ public class MainService {
      * if it is possible to eliminate this class, I do not do it without consulting others.
      */
 
-    private Set<Service> services;
+    private Set<IService> services;
 
     public MainService() {
         services = new HashSet<>();
         Reflections reflections = new Reflections("com.maimai.tamagotchi.services");
-        reflections.getSubTypesOf(Service.class).forEach(serviceClass -> {
+        reflections.getSubTypesOf(IService.class).forEach(serviceClass -> {
             try {
                 services.add(serviceClass.newInstance());
             } catch (InstantiationException | IllegalAccessException e) {
@@ -30,10 +31,10 @@ public class MainService {
     }
 
     public void start() {
-        services.forEach(Service::start);
+        services.forEach(IService::start);
     }
 
     public void stop() {
-        services.forEach(Service::stop);
+        services.forEach(IService::stop);
     }
 }

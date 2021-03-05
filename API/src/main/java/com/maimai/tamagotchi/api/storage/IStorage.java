@@ -1,10 +1,10 @@
-package com.maimai.tamagotchi.storage;
+package com.maimai.tamagotchi.api.storage;
 
 import com.maimai.tamagotchi.entities.UserEntity;
 
 import java.util.UUID;
 
-public interface Storage {
+public interface IStorage {
 
     UserEntity loadUser(UUID uuid);
 

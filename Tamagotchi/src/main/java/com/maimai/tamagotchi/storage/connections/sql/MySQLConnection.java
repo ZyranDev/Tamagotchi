@@ -1,10 +1,11 @@
 package com.maimai.tamagotchi.storage.connections.sql;
 
+import com.maimai.tamagotchi.api.storage.connections.sql.ISQLConnection;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
-public class MySQLConnection implements SQLConnection {
+public class MySQLConnection implements ISQLConnection {
 
     private Connection connection;
 
@@ -28,7 +29,7 @@ public class MySQLConnection implements SQLConnection {
                     ("jdbc:mysql://" + host + ":" + port + "/" + database, user, password);
 
             //connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port +
-                   // "/" + database +"user=" + user + "&" + "password=" + password);
+            // "/" + database +"user=" + user + "&" + "password=" + password);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("SQlConnection: " + e.getMessage());
