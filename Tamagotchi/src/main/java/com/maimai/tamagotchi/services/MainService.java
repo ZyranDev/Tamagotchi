@@ -16,7 +16,7 @@ public class MainService {
      * if it is possible to eliminate this class, I do not do it without consulting others.
      */
 
-    private Set<IService> services;
+    /*private Set<IService> services;
 
     public MainService() {
         services = new HashSet<>();
@@ -36,5 +36,5 @@ public class MainService {
 
     public void stop() {
         services.forEach(IService::stop);
-    }
+    }*/
 }

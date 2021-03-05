@@ -1,18 +1,16 @@
 package com.maimai.tamagotchi.menu;
 
-
+import com.maimai.tamagotchi.api.menu.IMenu;
 import com.maimai.tamagotchi.utils.console.ChatColor;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Menu {
-
+public class MainMenu implements IMenu {
     Scanner scanner = new Scanner(System.in);
 
-    public void displayMainMenu() {
-
+    public void graphicalInter() {
         /*
          * This is only a test class and example, surely this is going to be re-coded.
          * I'm thinking here to put an option of logging in - registration,
@@ -20,6 +18,7 @@ public class Menu {
          * Sincerely yours: Camilo
          */
 
+        LoginMenu loginMenu = new LoginMenu();
         List<String> menuItems = Arrays.asList(
                 "",
                 "&1&lMain Menu",
@@ -51,8 +50,16 @@ public class Menu {
                 break;
             default:
                 System.out.println("Please select one of the options specified above.");
+                loginMenu.displayMenu();
                 break;
         }
     }
 
+    public void displayMenu() {
+        graphicalInter();
+    }
+
+    public void interrupt() {
+
+    }
 }
