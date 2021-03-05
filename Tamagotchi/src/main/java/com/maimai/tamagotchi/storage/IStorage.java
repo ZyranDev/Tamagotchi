@@ -1,5 +1,4 @@
-package com.maimai.tamagotchi.api.storage;
-
+package com.maimai.tamagotchi.storage;
 import com.maimai.tamagotchi.entities.UserEntity;
 
 import java.util.UUID;

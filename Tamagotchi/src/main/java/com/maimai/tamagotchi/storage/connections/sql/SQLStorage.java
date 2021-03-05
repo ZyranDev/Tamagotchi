@@ -1,8 +1,9 @@
 package com.maimai.tamagotchi.storage.connections.sql;
 
-import com.maimai.tamagotchi.api.storage.IStorage;
+
 import com.maimai.tamagotchi.api.storage.connections.sql.ISQLConnection;
 import com.maimai.tamagotchi.entities.UserEntity;
+import com.maimai.tamagotchi.storage.IStorage;
 
 import java.sql.Connection;
 import java.sql.SQLException;
