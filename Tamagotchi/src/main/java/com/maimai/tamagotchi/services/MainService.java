@@ -7,6 +7,14 @@ import java.util.Set;
 
 public class MainService {
 
+    /*
+     * According to me, this class is unnecessary in addition to being a bit poorly optimized by the theme
+     * of the reflection, plus there really are few services and 1.
+     * is much easier and more efficient to do it by hand,
+     * instead of doing it this way, or so I think,
+     * if it is possible to eliminate this class, I do not do it without consulting others.
+     */
+
     private Set<Service> services;
 
     public MainService() {
