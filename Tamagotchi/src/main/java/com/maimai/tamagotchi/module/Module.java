@@ -1,6 +1,8 @@
 package com.maimai.tamagotchi.module;
 
-public class Module implements IModule {
+
+
+public class Module {
 
     public void start() {
 
@@ -14,5 +16,6 @@ public class Module implements IModule {
         for (String arg : wolf) {
             System.out.println(arg);
         }*/
+
     }
 }

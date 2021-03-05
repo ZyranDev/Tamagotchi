@@ -17,4 +17,5 @@ public class UserEntity {
         this.uuid = UUID.randomUUID();
         this.mascots = new HashSet<>();
     }
+
 }

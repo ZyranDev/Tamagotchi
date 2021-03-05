@@ -2,15 +2,16 @@ package com.maimai.tamagotchi.logs;
 
 import com.maimai.tamagotchi.managers.UserManager;
 import com.maimai.tamagotchi.menu.Menu;
-import com.maimai.tamagotchi.utils.console.Colors;
+import com.maimai.tamagotchi.services.MainService;
 
 import java.util.Scanner;
 
 public class UserLog {
 
-    Scanner input = new Scanner(System.in);
-    Menu menu = new Menu();
+    private final Scanner input = new Scanner(System.in);
     UserManager userManager = new UserManager();
+    MainService mainService = new MainService();
+    Menu menu = new Menu();
 
 
     public void onUserLog() {
@@ -19,9 +20,11 @@ public class UserLog {
         String userName = input.nextLine();
         if (userManager.getUserByDisplayName(userName).isPresent()) {
             menu.displayMainMenu();
+
         } else {
             userManager.createUser(userName);
         }
 
     }
+
 }

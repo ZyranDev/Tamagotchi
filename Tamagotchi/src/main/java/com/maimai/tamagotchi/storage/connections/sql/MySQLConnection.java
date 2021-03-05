@@ -23,10 +23,17 @@ public class MySQLConnection implements SQLConnection {
     @Override
     public void createConnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database, user, password);
-        } catch (ClassNotFoundException | SQLException e) {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            connection = DriverManager.getConnection
+                    ("jdbc:mysql://" + host + ":" + port + "/" + database, user, password);
+
+            //connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port +
+                   // "/" + database +"user=" + user + "&" + "password=" + password);
+        } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("SQlConnection: " + e.getMessage());
+
+            // ClassNotFoundException | SQLException e
         }
     }
 

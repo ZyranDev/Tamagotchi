@@ -1,17 +1,11 @@
 package com.maimai.tamagotchi.menu;
 
-import com.maimai.tamagotchi.entities.UserEntity;
-import com.maimai.tamagotchi.managers.MascotManager;
-import com.maimai.tamagotchi.managers.UserManager;
-import com.maimai.tamagotchi.utils.Cache;
-import com.maimai.tamagotchi.utils.console.Colors;
 
 import java.util.Scanner;
 
 public class Menu {
 
     Scanner input = new Scanner(System.in);
-    Colors color = new Colors();
 
 
     public void displayMainMenu() {

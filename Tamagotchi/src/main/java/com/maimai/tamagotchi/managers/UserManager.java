@@ -14,7 +14,7 @@ public class UserManager extends Cache<UUID, UserEntity> {
         return userEntity;
     }
 
-    private Optional<UserEntity> getUserByDisplayName(String displayName) {
+    public Optional<UserEntity> getUserByDisplayName(String displayName) {
         return getCache().values().stream()
                 .filter(userEntity -> userEntity.getDisplayName().equals(displayName)).findFirst();
     }

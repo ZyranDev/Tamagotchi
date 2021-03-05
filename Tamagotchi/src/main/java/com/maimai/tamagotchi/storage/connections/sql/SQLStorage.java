@@ -31,9 +31,13 @@ public class SQLStorage implements Storage {
         if (connection == null) return;
 
         try (Statement statement = connection.createStatement()) {
-            statement.execute("CREATE TABLE IF NOT EXISTS Tamagotchi(UUID VARCHAR(36) PRIMARY KEY NOT NULL, DATA LONGTEXT);");
+            statement.executeUpdate
+                    ("CREATE TABLE IF NOT EXISTS Tamagotchi (uuid VARCHAR(36) PRIMARY KEY NOT NULL, data LONGTEXT)");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+            System.out.println("SqlException: " + throwables.getMessage());
+            System.out.println("SqlState:" + throwables.getSQLState());
+            System.out.println("VendorError: " + throwables.getErrorCode());
         }
     }
 }
