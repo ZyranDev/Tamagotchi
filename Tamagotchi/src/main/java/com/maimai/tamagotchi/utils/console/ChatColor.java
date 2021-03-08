@@ -1,13 +1,10 @@
 package com.maimai.tamagotchi.utils.console;
 
-import lombok.Getter;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@Getter
 public enum ChatColor {
     BLACK('0', "\u001B[30m"),
     BLUE('1', "\033[34m"),
@@ -46,7 +43,7 @@ public enum ChatColor {
             char colorCode = colorMatcher.group().charAt(1);
             ChatColor chatColor = COLOR_MAP.get(colorCode);
             if (chatColor == null) chatColor = ChatColor.WHITE;
-            textToTranslate = textToTranslate.replaceAll("&" + colorCode, chatColor.getColor());
+            textToTranslate = textToTranslate.replaceAll("&" + colorCode, chatColor.color);
         }
         return textToTranslate;
     }

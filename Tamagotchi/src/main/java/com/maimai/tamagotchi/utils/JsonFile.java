@@ -1,10 +1,7 @@
 package com.maimai.tamagotchi.utils;
 
-import lombok.Getter;
-
 import java.io.*;
 
-@Getter
 public class JsonFile {
 
     private final File jsonFile;
@@ -41,7 +38,7 @@ public class JsonFile {
     }
 
     public String getJson() throws IOException {
-        if (!jsonFile.exists()) return "";
+        if (!jsonFile.exists()) return "{}";
 
         FileReader fileReader = new FileReader(jsonFile);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -51,6 +48,9 @@ public class JsonFile {
         while ((line = bufferedReader.readLine()) != null) {
             stringBuilder.append(line);
         }
+
+        fileReader.close();
+        bufferedReader.close();
 
         return stringBuilder.toString();
     }
