@@ -1,7 +1,4 @@
-package com.maimai.tamagotchi.statistic;
-
-import java.util.Collections;
-import java.util.Map;
+package com.maimai.tamagotchi.api.statistic;
 
 public class SimpleStatistic implements Statistic {
 
@@ -9,10 +6,6 @@ public class SimpleStatistic implements Statistic {
 
     public SimpleStatistic(int value) {
         this.value = value;
-    }
-
-    public SimpleStatistic(Map<String, Object> objectMap) {
-        this((int) objectMap.get("value"));
     }
 
     public SimpleStatistic() {

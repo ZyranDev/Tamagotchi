@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.statistic;
+package com.maimai.tamagotchi.api.statistic;
 
 public interface Statistic {
 
