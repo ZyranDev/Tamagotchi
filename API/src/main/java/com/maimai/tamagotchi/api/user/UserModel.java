@@ -1,11 +1,11 @@
-package com.maimai.tamagotchi.menu.viewer;
+package com.maimai.tamagotchi.api.user;
 
 import com.maimai.tamagotchi.api.menu.Menu;
 import com.maimai.tamagotchi.api.menu.MenuViewer;
 
 import java.util.Optional;
 
-public class SimpleMenuViewerImpl implements MenuViewer {
+public class UserModel implements MenuViewer {
 
     private Menu previousMenu;
 
@@ -18,10 +18,7 @@ public class SimpleMenuViewerImpl implements MenuViewer {
         }
 
         this.currentMenu = menu;
-    }
-
-    public static void main(String[] args) {
-
+        menu.displayMenu();
     }
 
     @Override
