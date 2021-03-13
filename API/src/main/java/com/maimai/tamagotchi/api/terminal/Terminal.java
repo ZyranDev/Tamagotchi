@@ -28,14 +28,20 @@ public final class Terminal {
         if (INITIALIZED)
             throw new UnsupportedOperationException("cannot initialize a terminal two times");
 
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String input;
-        while ((input = bufferedReader.readLine()) != null) {
-            if (!input.equals(""))
-                if (!commandManager.executeCommand(CommandContext.parse(input))) {
-                    System.out.println(messageRepository.getMessage("unknown-command"));
+        new Thread(() -> {
+            try {
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                String input;
+                while ((input = bufferedReader.readLine()) != null) {
+                    if (!input.equals(""))
+                        if (!commandManager.executeCommand(CommandContext.parse(input))) {
+                            System.out.println(messageRepository.getMessage("unknown-command"));
+                        }
                 }
-        }
-        bufferedReader.close();
+                bufferedReader.close();
+            } catch (IOException e) {
+                throw new UnsupportedOperationException("Exception initializing Terminal", e);
+            }
+        }).start();
     }
 }
