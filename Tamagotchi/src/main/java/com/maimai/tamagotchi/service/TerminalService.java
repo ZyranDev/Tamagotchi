@@ -36,7 +36,8 @@ public class TerminalService implements Service {
 
     @Override
     public void stop() {
-
+        /* When the service is stopped, do return method */
+        return;
     }
 
     public CommandManager getCommandManager() {

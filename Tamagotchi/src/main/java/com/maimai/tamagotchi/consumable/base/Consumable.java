@@ -8,7 +8,7 @@ import com.maimai.tamagotchi.utils.serialization.SerializationUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Consumable {
+public class Consumable implements IConsumable {
     List<ConsumableEntity.ConsumableItem> consumableItems = new ArrayList<>();
     Gson gson = SerializationUtils.getGSON();
 
@@ -16,6 +16,15 @@ public class Consumable {
         consumableItems.add(new ConsumableEntity.ConsumableItem(subject, quantity));
     }
 
-    public void removeConsumable(ConsumableSubject subject, int quantity) {
+    @Override
+    public void load() {
+        for (int i = 0; i < consumableItems.size(); i++) {
+            System.out.println(consumableItems.get(i));
+        }
+    }
+
+    @Override
+    public void save() {
+
     }
 }

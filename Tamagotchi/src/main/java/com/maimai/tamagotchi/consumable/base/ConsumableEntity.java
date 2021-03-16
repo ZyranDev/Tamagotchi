@@ -13,7 +13,7 @@ public class ConsumableEntity {
 
     public static class ConsumableItem {
         ConsumableSubject subject;
-        int quantity;
+        private int quantity;
 
         public ConsumableItem(ConsumableSubject subject, int quantity) {
             this.subject = subject;

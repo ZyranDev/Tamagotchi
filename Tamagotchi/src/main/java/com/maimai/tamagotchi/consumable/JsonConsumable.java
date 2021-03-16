@@ -1,15 +1,10 @@
 package com.maimai.tamagotchi.consumable;
 
-import com.google.gson.Gson;
 import com.maimai.tamagotchi.consumable.base.Consumable;
-import com.maimai.tamagotchi.consumable.base.ConsumableEntity;
 import com.maimai.tamagotchi.utils.JsonFile;
-import com.maimai.tamagotchi.utils.serialization.SerializationUtils;
 
 public class JsonConsumable implements IConsumable {
-    private final JsonFile jsonFile;
-    private ConsumableEntity consumableEntity;
-    private boolean loaded;
+    private JsonFile jsonFile;
 
     public JsonConsumable(JsonFile jsonFile) {
         this.jsonFile = jsonFile;
@@ -17,7 +12,7 @@ public class JsonConsumable implements IConsumable {
 
     @Override
     public void load() {
-        Gson gson = SerializationUtils.getGSON();
+        /* Uncomment when you make sure that the JSON is available in the project */
         try {
 
         } catch (Exception e) {
@@ -27,7 +22,7 @@ public class JsonConsumable implements IConsumable {
 
     @Override
     public void save() {
-
+        /* Uncomment when you make sure that the JSON is available in the project */
     }
 
     @Override

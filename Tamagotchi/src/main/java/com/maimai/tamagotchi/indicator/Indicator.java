@@ -1,7 +1,7 @@
 package com.maimai.tamagotchi.indicator;
 
-import com.maimai.tamagotchi.listeners.IndicatorListener;
 import com.maimai.tamagotchi.api.statistic.SimpleStatistic;
+import com.maimai.tamagotchi.listeners.IndicatorListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,8 @@ public class Indicator extends SimpleStatistic {
 
     private final List<IndicatorListener> listeners = new ArrayList<>();
 
-    public Indicator() {}
+    public Indicator() {
+    }
 
     public Indicator(int value) {
         super(value);
@@ -49,8 +50,9 @@ public class Indicator extends SimpleStatistic {
     }
 
     public void addListener(IndicatorListener indicatorListener) {
-        if (indicatorListener == null)
+        if (indicatorListener == null) {
             throw new NullPointerException();
+        }
 
         listeners.add(indicatorListener);
     }
