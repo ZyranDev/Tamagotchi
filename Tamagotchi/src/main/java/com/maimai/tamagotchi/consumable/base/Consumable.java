@@ -25,6 +25,7 @@ public class Consumable implements IConsumable {
 
     @Override
     public void save() {
-
+        /* Uncomment when you make sure that the JSON is available in the project */
+        return;
     }
 }
