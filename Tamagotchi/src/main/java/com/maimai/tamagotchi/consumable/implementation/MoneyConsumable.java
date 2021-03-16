@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.consumable.implementatios;
+package com.maimai.tamagotchi.consumable.implementation;
 
 import com.maimai.tamagotchi.consumable.base.Consumable;
 import com.maimai.tamagotchi.consumable.subject.ConsumableSubject;

@@ -1,6 +1,6 @@
 package com.maimai.tamagotchi;
 
-import com.maimai.tamagotchi.consumable.implementatios.MoneyConsumable;
+import com.maimai.tamagotchi.consumable.implementation.MoneyConsumable;
 import com.maimai.tamagotchi.service.TamagotchiService;
 
 public class TamagotchiLauncher {
