@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 public class ShopMenu extends SimpleMenu {
     @Override
     public void displayMenu() {
-        System.out.println("TEST");
+        System.out.println("Test");
     }
 
     @Override

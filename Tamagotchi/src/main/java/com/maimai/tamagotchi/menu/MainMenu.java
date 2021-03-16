@@ -6,7 +6,7 @@ public class MainMenu extends SimpleMenu {
 
     @Override
     public void displayMenu() {
-
+        System.out.println("Test");
     }
 
     @Override
