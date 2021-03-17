@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.utils.color;
+package com.maimai.tamagotchi.utils.console;
 
 import java.util.HashMap;
 import java.util.Map;
