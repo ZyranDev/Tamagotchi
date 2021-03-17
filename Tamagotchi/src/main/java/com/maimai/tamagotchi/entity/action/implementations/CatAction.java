@@ -31,7 +31,7 @@ public class CatAction implements ActionModel {
 
     /* Special actions */
     public void purrAction() {
-        System.out.println("Nya, grr, meow 🐱");
+        System.out.println("Nya, grr, meow.. 🐱");
     }
 
     public void somersaultAction() {
