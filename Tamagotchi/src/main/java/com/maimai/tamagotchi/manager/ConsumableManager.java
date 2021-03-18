@@ -1,32 +1,42 @@
 package com.maimai.tamagotchi.manager;
 
-import com.maimai.tamagotchi.consumable.base.Consumable;
-import com.maimai.tamagotchi.consumable.IConsumable;
-import com.maimai.tamagotchi.consumable.JsonConsumable;
-import com.maimai.tamagotchi.utils.JsonFile;
+import com.google.gson.Gson;
+import com.maimai.tamagotchi.consumable.base.ConsumableEntity;
+import com.maimai.tamagotchi.consumable.subject.ConsumableSubject;
 
-import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class ConsumableManager extends SimpleManager<String, Consumable> {
-    private final File folder;
+public class ConsumableManager {
+    private final Map<ConsumableSubject, List<Integer>> map;
 
-    public ConsumableManager(File folder) {
-        if (!folder.exists())
-            folder.mkdirs();
-
-        this.folder = folder;
-        loadConsumable();
+    public ConsumableManager() {
+        map = new HashMap<>();
     }
 
-    private void loadConsumable() {
-        File[] files = folder.listFiles((dir, name) -> name.startsWith("Consumables") && name.endsWith(".json"));
-        if (files == null)
-            return;
-
-        for (File file : files) {
-            IConsumable consumable = new JsonConsumable(new JsonFile(file));
-
-            addManageableObject(consumable.getSessionName(), consumable.getConsumableEntity());
+    public void addMoney(ConsumableSubject subject, int value) {
+        if (!map.containsKey(subject)) {
+            map.put(subject, new ArrayList<>());
         }
+
+        List<ConsumableEntity> consumableEntities = new ArrayList<>();
+        consumableEntities.add(new ConsumableEntity(subject, value));
+        Gson gson = new Gson();
+        gson.toJson(consumableEntities);
+        map.get(subject).add(value);
+    }
+
+    public double getMoney(ConsumableSubject subject) {
+        if (!map.containsKey(subject)) return 0;
+
+        List<Integer> mapList = map.get(subject);
+        double money = 0;
+        for (int value : mapList) {
+            money += value;
+        }
+
+        return money;
     }
 }
