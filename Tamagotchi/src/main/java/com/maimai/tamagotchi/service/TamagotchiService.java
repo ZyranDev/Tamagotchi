@@ -3,7 +3,6 @@ package com.maimai.tamagotchi.service;
 import com.maimai.tamagotchi.api.manager.Manager;
 import com.maimai.tamagotchi.api.service.Service;
 import com.maimai.tamagotchi.api.user.UserModel;
-import com.maimai.tamagotchi.manager.ConsumableManager;
 import com.maimai.tamagotchi.manager.GameSessionManager;
 import com.maimai.tamagotchi.session.GameSession;
 
@@ -16,7 +15,6 @@ public class TamagotchiService implements Service {
     private final Map<Class<? extends Service>, Service> services;
 
     private final Manager<String, GameSession> gameSessionManager;
-    private final ConsumableManager iConsumableManager;
 
     private final UserModel userModel;
 
@@ -25,7 +23,6 @@ public class TamagotchiService implements Service {
         this.services.put(TerminalService.class, new TerminalService(this));
 
         this.gameSessionManager = new GameSessionManager(new File("saved games"));
-        this.iConsumableManager = new ConsumableManager(new File("saved games"));
 
         this.userModel = new UserModel();
     }
