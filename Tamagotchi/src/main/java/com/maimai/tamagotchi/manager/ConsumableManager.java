@@ -23,14 +23,12 @@ public class ConsumableManager {
 
         List<ConsumableEntity> consumableEntities = new ArrayList<>();
         consumableEntities.add(new ConsumableEntity(subject, value));
-        Gson gson = new Gson();
-        gson.toJson(consumableEntities);
+        new Gson().toJson(consumableEntities);
         map.get(subject).add(value);
     }
 
     public double getMoney(ConsumableSubject subject) {
         if (!map.containsKey(subject)) return 0;
-
         List<Integer> mapList = map.get(subject);
         double money = 0;
         for (int value : mapList) {
