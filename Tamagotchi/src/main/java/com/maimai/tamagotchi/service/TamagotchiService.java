@@ -1,15 +1,14 @@
 package com.maimai.tamagotchi.service;
 
-import com.maimai.tamagotchi.api.service.Service;
-import com.maimai.tamagotchi.manager.GameSessionManager;
 import com.maimai.tamagotchi.api.manager.Manager;
-import com.maimai.tamagotchi.session.GameSession;
+import com.maimai.tamagotchi.api.service.Service;
 import com.maimai.tamagotchi.api.user.UserModel;
+import com.maimai.tamagotchi.manager.GameSessionManager;
+import com.maimai.tamagotchi.session.GameSession;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class TamagotchiService implements Service {
 

@@ -36,7 +36,9 @@ public class TerminalService implements Service {
 
     @Override
     public void stop() {
-
+        /* When the service is stopped, do return method */
+        System.out.println("All has been stopped");
+        return;
     }
 
     public CommandManager getCommandManager() {

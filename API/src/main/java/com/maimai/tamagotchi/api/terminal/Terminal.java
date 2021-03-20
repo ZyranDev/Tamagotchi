@@ -40,8 +40,10 @@ public final class Terminal {
                 }
                 bufferedReader.close();
             } catch (IOException e) {
-                throw new UnsupportedOperationException("Exception initializing Terminal", e);
+                throw new UnsupportedOperationException("Exception initializing terminal", e);
             }
         }).start();
+        
+       INITIALIZED = true;
     }
 }

@@ -2,8 +2,7 @@ package com.maimai.tamagotchi.menu;
 
 import java.util.function.Consumer;
 
-public class MainMenu extends SimpleMenu {
-
+public class ShopMenu extends SimpleMenu {
     @Override
     public void displayMenu() {
         System.out.println("Test");
