@@ -29,14 +29,24 @@ public class SimpleCommandManager implements CommandManager {
         if (command == null)
             return false;
 
+        int commandArgumentIndex = 0;
         for (String commandArgument : context.getCommandArguments()) {
             Command subCommand = command.getSubCommands().get(commandArgument);
 
-            if (subCommand != null)
+            if (subCommand != null) {
                 command = subCommand;
+                commandArgumentIndex++;
+            }
         }
 
-        CommandArgumentManager argumentManager = new CommandArgumentManagerImpl(context.getCommandArguments().toArray(new String[0]));
+        String[] args = context.getCommandArguments().toArray(new String[0]);
+
+        args = Arrays.copyOfRange(
+                args,
+                commandArgumentIndex,
+                args.length);
+
+        CommandArgumentManager argumentManager = new CommandArgumentManagerImpl(args);
 
         commandPartProviders.forEach(commandInterceptor -> commandInterceptor.configure(argumentManager));
 
