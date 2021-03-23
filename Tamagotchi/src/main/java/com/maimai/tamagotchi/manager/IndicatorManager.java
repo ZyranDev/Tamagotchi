@@ -1,7 +1,7 @@
 package com.maimai.tamagotchi.manager;
 
-import com.maimai.tamagotchi.indicator.Indicator;
-import com.maimai.tamagotchi.indicator.IndicatorType;
+import com.maimai.tamagotchi.mascot.indicator.Indicator;
+import com.maimai.tamagotchi.mascot.indicator.IndicatorType;
 
 public class IndicatorManager extends SimpleManager<IndicatorType, Indicator> {
 

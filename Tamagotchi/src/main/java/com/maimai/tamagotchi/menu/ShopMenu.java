@@ -1,11 +1,28 @@
 package com.maimai.tamagotchi.menu;
 
+import com.maimai.tamagotchi.utils.console.Console;
+
 import java.util.function.Consumer;
 
 public class ShopMenu extends SimpleMenu {
     @Override
     public void displayMenu() {
-        System.out.println("Test");
+        Console.print(
+                "________________________",
+                "| &cTama-Shop&r            |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "|                      |",
+                "------------------------"
+        );
     }
 
     @Override

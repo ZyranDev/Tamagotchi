@@ -1,13 +1,13 @@
-package com.maimai.tamagotchi.entity.action.implementations;
+package com.maimai.tamagotchi.mascot.entity.action.implementations;
 
-import com.maimai.tamagotchi.entity.action.ActionModel;
-import com.maimai.tamagotchi.utils.console.ArrayPrintln;
+import com.maimai.tamagotchi.mascot.entity.action.ActionModel;
+import com.maimai.tamagotchi.utils.console.Console;
 
 public class CatAction implements ActionModel {
     /* Default actions */
     @Override
     public void drinkAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                _ |\\_",
                 "                \\` ..\\",
                 "           __,.-\" =__Y=",
@@ -21,7 +21,7 @@ public class CatAction implements ActionModel {
 
     @Override
     public void eatAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                _ |\\_",
                 "                \\` ..\\",
                 "           __,.-\" =__Y=",
@@ -35,7 +35,7 @@ public class CatAction implements ActionModel {
 
     @Override
     public void jumpAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "            _,'|             _.-''``-...___..--';)",
                 "           /_ \\'.      __..-' ,      ,--...--'''",
                 "          <\\    .`--'''       `     /'",
@@ -48,7 +48,7 @@ public class CatAction implements ActionModel {
 
     @Override
     public void runAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                        _",
                 "                       | \\",
                 "                       | |",
@@ -69,7 +69,7 @@ public class CatAction implements ActionModel {
 
     @Override
     public void sleepAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "      |\\      _,,,---,,_",
                 "ZZZzz /,`.-'`'    -.  ;-;;,_",
                 "     |,4-  ) )-,_. ,\\ (  `'-'",
@@ -80,7 +80,7 @@ public class CatAction implements ActionModel {
 
     /* Special actions */
     public void purrAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "           .               ,.",
                 "          T.\"-._..---.._,-\"/|",
                 "          l|\"-.  _.v._   (\" |",
@@ -108,7 +108,7 @@ public class CatAction implements ActionModel {
     }
 
     public void searchAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "  ,-.       _,---._ __  / \\",
                 " /  )    .-'       `./ /   \\",
                 "(  (   ,'            `/    /|",

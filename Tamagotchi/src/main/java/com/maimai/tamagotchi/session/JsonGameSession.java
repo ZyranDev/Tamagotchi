@@ -1,7 +1,7 @@
 package com.maimai.tamagotchi.session;
 
 import com.google.gson.Gson;
-import com.maimai.tamagotchi.entity.MascotEntity;
+import com.maimai.tamagotchi.mascot.entity.MascotEntity;
 import com.maimai.tamagotchi.utils.JsonFile;
 import com.maimai.tamagotchi.utils.serialization.SerializationUtils;
 
@@ -27,15 +27,5 @@ public class JsonGameSession implements GameSession {
     @Override
     public void save() {
 
-    }
-
-    @Override
-    public MascotEntity getMascotEntity() {
-        return null;
-    }
-
-    @Override
-    public String getSessionName() {
-        return null;
     }
 }

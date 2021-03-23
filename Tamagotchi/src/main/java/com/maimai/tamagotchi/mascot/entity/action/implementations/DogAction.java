@@ -1,13 +1,13 @@
-package com.maimai.tamagotchi.entity.action.implementations;
+package com.maimai.tamagotchi.mascot.entity.action.implementations;
 
-import com.maimai.tamagotchi.entity.action.ActionModel;
-import com.maimai.tamagotchi.utils.console.ArrayPrintln;
+import com.maimai.tamagotchi.mascot.entity.action.ActionModel;
+import com.maimai.tamagotchi.utils.console.Console;
 
 public class DogAction implements ActionModel {
     /* Default actions */
     @Override
     public void drinkAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "           ___",
                 "        __/_  `.  .-\"\"\"-.",
                 "        \\_,` | \\-'  /   )`-')",
@@ -20,7 +20,7 @@ public class DogAction implements ActionModel {
 
     @Override
     public void eatAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "           ___",
                 "        __/_  `.  .-\"\"\"-.",
                 "        \\_,` | \\-'  /   )`-')",
@@ -33,7 +33,7 @@ public class DogAction implements ActionModel {
 
     @Override
     public void jumpAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                  ;~~,__",
                 "   :-....,-------'`-'._.'",
                 "    `-,,,  ,       ;'~~'",
@@ -45,7 +45,7 @@ public class DogAction implements ActionModel {
 
     @Override
     public void runAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "             .--~~,__",
                 ":-....,-------`~~'._.'",
                 " `-,,,  ,_      ;'~U'",
@@ -56,7 +56,7 @@ public class DogAction implements ActionModel {
 
     @Override
     public void sleepAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                __",
                 "               /\\/'-,",
                 "       ,--'''''   /\"",
@@ -68,7 +68,7 @@ public class DogAction implements ActionModel {
 
     /* Special  actions */
     public void barkAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                  ;~~,__",
                 "   :-....,-------'`-'._.'",
                 "    `-,,,  ,       ,'~~'",
@@ -80,7 +80,7 @@ public class DogAction implements ActionModel {
     }
 
     public void spinAroundAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                _,)",
                 "        _..._.-;-'",
                 "     .-'     `(",

@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.entity.action;
+package com.maimai.tamagotchi.mascot.entity.action;
 
 public interface ActionModel {
     void drinkAction();

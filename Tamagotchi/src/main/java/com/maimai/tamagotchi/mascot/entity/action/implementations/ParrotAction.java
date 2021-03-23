@@ -1,6 +1,6 @@
-package com.maimai.tamagotchi.entity.action.implementations;
+package com.maimai.tamagotchi.mascot.entity.action.implementations;
 
-import com.maimai.tamagotchi.entity.action.ActionModel;
+import com.maimai.tamagotchi.mascot.entity.action.ActionModel;
 
 public class ParrotAction implements ActionModel {
     /* Default actions */

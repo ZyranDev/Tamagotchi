@@ -1,7 +1,7 @@
-package com.maimai.tamagotchi.entity.action.implementations;
+package com.maimai.tamagotchi.mascot.entity.action.implementations;
 
-import com.maimai.tamagotchi.entity.action.ActionModel;
-import com.maimai.tamagotchi.utils.console.ArrayPrintln;
+import com.maimai.tamagotchi.mascot.entity.action.ActionModel;
+import com.maimai.tamagotchi.utils.console.Console;
 
 public class LionAction implements ActionModel {
     /* Default actions */
@@ -27,7 +27,7 @@ public class LionAction implements ActionModel {
 
     @Override
     public void sleepAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                          ,%%%%%%%,",
                 "                        ,%%/\\%%%%/\\%,",
                 "                       ,%%%\\c \"\" J/%%,",
@@ -45,7 +45,7 @@ public class LionAction implements ActionModel {
 
     /* Special actions */
     public void roarAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "               /\\",
                 "              ( ;`~v/~~~ ;._",
                 "           ,/'\"/^) ' < o\\  '\".~'\\\\\\--,",
@@ -61,7 +61,7 @@ public class LionAction implements ActionModel {
     }
 
     public void huntAction() {
-        ArrayPrintln.print(
+        Console.print(
                 "                       __,,,,_",
                 "   _   _ ___.--'''`--''// ,-o `-.",
                 "   \\`)' o |  \\  \\ o\\/ /.// / ,-  o,_",

@@ -19,14 +19,12 @@ public class GameSessionManager extends SimpleManager<String, GameSession> {
     }
 
     private void loadSessions() {
-        File[] files = folder.listFiles((dir, name) ->  name.startsWith("GameSession") && name.endsWith(".json"));
+        File[] files = folder.listFiles((dir, name) -> name.startsWith("GameSession") && name.endsWith(".json"));
         if (files == null)
             return;
 
         for (File file : files) {
             GameSession gameSession = new JsonGameSession(new JsonFile(file));
-
-            addManageableObject(gameSession.getSessionName(), gameSession);
         }
     }
 }

@@ -1,8 +1,8 @@
-package com.maimai.tamagotchi.entity;
+package com.maimai.tamagotchi.mascot.entity;
 
 import com.google.gson.annotations.SerializedName;
-import com.maimai.tamagotchi.indicator.Indicator;
-import com.maimai.tamagotchi.indicator.IndicatorType;
+import com.maimai.tamagotchi.mascot.indicator.Indicator;
+import com.maimai.tamagotchi.mascot.indicator.IndicatorType;
 import com.maimai.tamagotchi.api.manager.Manager;
 import com.maimai.tamagotchi.manager.IndicatorManager;
 
