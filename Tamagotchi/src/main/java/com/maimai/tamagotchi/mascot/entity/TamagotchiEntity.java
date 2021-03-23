@@ -1,7 +1,7 @@
 package com.maimai.tamagotchi.mascot.entity;
 
 import com.google.gson.annotations.SerializedName;
-import com.maimai.tamagotchi.manager.IndicatorManager;
+import com.maimai.tamagotchi.mascot.indicator.IndicatorType;
 
 import java.util.List;
 
@@ -27,6 +27,8 @@ public class TamagotchiEntity {
             EntityType mascotType;
             @SerializedName("inventory")
             List<TamagotchiUser.Mascot.MascotInventory> mascotInventory;
+            @SerializedName("indicator")
+            List<TamagotchiUser.Mascot.MascotIndicator> mascotIndicators;
 
             public static class MascotInventory {
                 @SerializedName("item")
@@ -41,17 +43,22 @@ public class TamagotchiEntity {
             }
 
             public static class MascotIndicator {
-                @SerializedName("indicators")
-                IndicatorManager indicatorManager;
+                @SerializedName("type")
+                IndicatorType indicatorType;
+                @SerializedName("level")
+                int indicatorQuantity;
 
-                public MascotIndicator(IndicatorManager indicatorManager) {
-                    this.indicatorManager = indicatorManager;
+                public MascotIndicator(IndicatorType indicatorType, int indicatorQuantity) {
+                    this.indicatorType = indicatorType;
+                    this.indicatorQuantity = indicatorQuantity;
                 }
             }
-            public Mascot(String mascotName, EntityType mascotType, List<MascotInventory> mascotInventory) {
+
+            public Mascot(String mascotName, EntityType mascotType, List<MascotInventory> mascotInventory, List<MascotIndicator> mascotIndicators) {
                 this.mascotName = mascotName;
                 this.mascotType = mascotType;
                 this.mascotInventory = mascotInventory;
+                this.mascotIndicators = mascotIndicators;
             }
         }
     }
