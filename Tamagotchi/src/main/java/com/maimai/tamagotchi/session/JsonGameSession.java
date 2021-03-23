@@ -15,7 +15,7 @@ public class JsonGameSession implements GameSession {
     }
 
     @Override
-    public void load() {
+    public void loadGameSession() {
         Gson gson = SerializationUtils.getGSON();
         try {
 
