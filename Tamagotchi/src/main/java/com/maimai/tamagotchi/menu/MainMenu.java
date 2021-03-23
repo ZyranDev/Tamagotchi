@@ -1,11 +1,7 @@
 package com.maimai.tamagotchi.menu;
 
-import com.maimai.tamagotchi.mascot.entity.EntityType;
-import com.maimai.tamagotchi.mascot.entity.MascotEntity;
-import com.maimai.tamagotchi.mascot.indicator.IndicatorType;
 import com.maimai.tamagotchi.utils.console.Console;
 
-import java.util.Locale;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
@@ -60,19 +56,15 @@ public class MainMenu extends SimpleMenu {
         switch (petType.toLowerCase()) {
             case "cat":
                 System.out.println("Cat");
-                new ShopMenu().displayMenu();
                 break;
             case "lion":
                 System.out.println("Lion");
-                new ShopMenu().displayMenu();
                 break;
             case "dog":
                 System.out.println("Dog");
-                new ShopMenu().displayMenu();
                 break;
             case "parrot":
                 System.out.println("Parrot");
-                new ShopMenu().displayMenu();
                 break;
             default:
                 Console.print(
