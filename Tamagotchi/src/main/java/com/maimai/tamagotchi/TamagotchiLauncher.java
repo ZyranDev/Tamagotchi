@@ -1,9 +1,11 @@
 package com.maimai.tamagotchi;
 
-import com.maimai.tamagotchi.menu.MainMenu;
-import com.maimai.tamagotchi.menu.implementation.StartMenuData;
+import com.maimai.tamagotchi.module.MainModule;
+import com.maimai.tamagotchi.service.implementation.TamagotchiServiceImpl;
+import me.yushust.inject.Injector;
 
-import java.io.File;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 public class TamagotchiLauncher {
     /**
@@ -12,9 +14,22 @@ public class TamagotchiLauncher {
      * so all the data will be saved correctly.
      */
 
+    @Inject
+    @Named("tamagotchi-service")
+    private static TamagotchiServiceImpl tamagotchiServiceImpl;
+
     public static void main(String[] args) {
-        StartMenuData startMenuData = new StartMenuData(new File("saved games"));
-        startMenuData.onLoad();
-        new MainMenu().displayMenu();
+        Runnable runnable = () -> {
+            System.out.println("> Initialized " + Thread.currentThread().getName());
+        };
+
+        new Thread(runnable).start();
+
+        Thread.currentThread().setName("Thread - Service");
+
+        Injector injector = Injector.create(new MainModule());
+        injector.injectStaticMembers(TamagotchiLauncher.class);
+
+        tamagotchiServiceImpl.start();
     }
 }

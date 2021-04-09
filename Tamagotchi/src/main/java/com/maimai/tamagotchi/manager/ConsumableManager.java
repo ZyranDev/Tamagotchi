@@ -1,40 +1,34 @@
 package com.maimai.tamagotchi.manager;
 
-import com.google.gson.Gson;
-import com.maimai.tamagotchi.consumable.base.ConsumableEntity;
-import com.maimai.tamagotchi.consumable.subject.ConsumableSubject;
+import com.maimai.tamagotchi.mascot.subject.ConsumableSubject;
+import com.maimai.tamagotchi.storage.implementation.ConsumableStorage;
+import me.yushust.inject.InjectAll;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import javax.inject.Named;
 
+@InjectAll
 public class ConsumableManager {
-    private final Map<ConsumableSubject, List<Integer>> map;
 
-    public ConsumableManager() {
-        map = new HashMap<>();
+    @Named("consumable-manager")
+    private ConsumableStorage consumableStorage;
+
+    public void setConsumableValue(ConsumableSubject subject, int value) {
+        consumableStorage.addValue(subject, value);
     }
 
-    public void addMoney(ConsumableSubject subject, int value) {
-        if (!map.containsKey(subject)) {
-            map.put(subject, new ArrayList<>());
-        }
-
-        List<ConsumableEntity> consumableEntities = new ArrayList<>();
-        consumableEntities.add(new ConsumableEntity(subject, value));
-        new Gson().toJson(consumableEntities);
-        map.get(subject).add(value);
+    public void removeConsumableValue(ConsumableSubject subject) {
+        consumableStorage.removeValue(subject);
     }
 
-    public double getMoney(ConsumableSubject subject) {
-        if (!map.containsKey(subject)) return 0;
-        List<Integer> mapList = map.get(subject);
-        double money = 0;
-        for (int value : mapList) {
-            money += value;
-        }
+    public void findConsumableValue(ConsumableSubject subject) {
+        consumableStorage.find(subject);
+    }
 
-        return money;
+    public int getConsumableValue(ConsumableSubject subject) {
+        return consumableStorage.getValue(subject);
+    }
+
+    public boolean existsConsumableValue(ConsumableSubject subject) {
+        return consumableStorage.exists(subject);
     }
 }

@@ -47,8 +47,4 @@ public enum ChatColor {
         }
         return textToTranslate;
     }
-
-    public ChatColor getChatColorByChar(char character) {
-        return COLOR_MAP.get(character);
-    }
 }
