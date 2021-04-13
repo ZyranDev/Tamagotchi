@@ -1,7 +1,7 @@
 package com.maimai.tamagotchi.mascot.indicator;
 
 import com.maimai.tamagotchi.api.statistic.SimpleStatistic;
-import com.maimai.tamagotchi.utils.listeners.IndicatorListener;
+import com.maimai.tamagotchi.util.listeners.IndicatorListener;
 
 import java.util.ArrayList;
 import java.util.List;

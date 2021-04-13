@@ -1,8 +1,8 @@
 package com.maimai.tamagotchi.service.implementation;
 
-import com.maimai.tamagotchi.menu.MainMenu;
+import com.maimai.tamagotchi.menu.implementation.MainMenu;
 import com.maimai.tamagotchi.service.IService;
-import com.maimai.tamagotchi.utils.console.Console;
+import com.maimai.tamagotchi.util.console.Console;
 import me.yushust.inject.InjectAll;
 
 @InjectAll

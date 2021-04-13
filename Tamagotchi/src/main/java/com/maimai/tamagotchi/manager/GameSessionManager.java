@@ -2,7 +2,7 @@ package com.maimai.tamagotchi.manager;
 
 import com.maimai.tamagotchi.session.GameSession;
 import com.maimai.tamagotchi.session.JsonGameSession;
-import com.maimai.tamagotchi.utils.JsonFile;
+import com.maimai.tamagotchi.util.JsonFile;
 
 import java.io.File;
 

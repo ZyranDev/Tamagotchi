@@ -1,7 +1,7 @@
 package com.maimai.tamagotchi.mascot.entity.action.implementations;
 
 import com.maimai.tamagotchi.mascot.entity.action.ActionModel;
-import com.maimai.tamagotchi.utils.console.Console;
+import com.maimai.tamagotchi.util.console.Console;
 
 public class CatAction implements ActionModel {
     /* Default actions */

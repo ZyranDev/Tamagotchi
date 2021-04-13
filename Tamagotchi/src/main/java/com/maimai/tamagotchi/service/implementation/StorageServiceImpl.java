@@ -1,17 +1,18 @@
 package com.maimai.tamagotchi.service.implementation;
 
+import com.maimai.tamagotchi.TamagotchiLauncher;
 import com.maimai.tamagotchi.service.IService;
-import com.maimai.tamagotchi.storage.mongo.MongoDB;
-import me.yushust.inject.InjectAll;
 
-@InjectAll
+import javax.inject.Inject;
+
+
 public class StorageServiceImpl implements IService {
-    private MongoDB mongoDB;
+    @Inject
+    private TamagotchiLauncher tamagotchiLauncher;
 
     @Override
     public void start() {
         System.out.println(" > Initializing " + Thread.currentThread().getName());
-        mongoDB.startMongoDB();
     }
 
     @Override

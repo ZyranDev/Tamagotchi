@@ -2,8 +2,8 @@ package com.maimai.tamagotchi.session;
 
 import com.google.gson.Gson;
 import com.maimai.tamagotchi.mascot.entity.MascotEntity;
-import com.maimai.tamagotchi.utils.JsonFile;
-import com.maimai.tamagotchi.utils.serialization.SerializationUtils;
+import com.maimai.tamagotchi.util.JsonFile;
+import com.maimai.tamagotchi.util.serialization.SerializationUtils;
 
 public class JsonGameSession implements GameSession {
 
