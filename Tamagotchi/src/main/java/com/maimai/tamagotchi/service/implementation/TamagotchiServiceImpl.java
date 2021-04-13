@@ -2,6 +2,7 @@ package com.maimai.tamagotchi.service.implementation;
 
 import com.maimai.tamagotchi.api.user.UserModel;
 import com.maimai.tamagotchi.service.IService;
+import com.maimai.tamagotchi.util.console.ChatColor;
 import me.yushust.inject.InjectAll;
 
 import javax.inject.Named;
@@ -18,8 +19,15 @@ public class TamagotchiServiceImpl implements IService {
 
     @Override
     public void start() {
-        System.out.println("> Initialized " + Thread.currentThread().getName());
-        // storageService.start();
+        System.out.println(ChatColor.translateColorCodes("&r> Initializing " + Thread.currentThread().getName()));
+
+        /*Runnable runnable = () -> {
+            System.out.println(ChatColor.translateColorCodes("&r> Initializing " + Thread.currentThread().getName()));
+            storageService.start();
+        };
+
+        new Thread(runnable).start();*/
+
         menuService.start();
     }
 

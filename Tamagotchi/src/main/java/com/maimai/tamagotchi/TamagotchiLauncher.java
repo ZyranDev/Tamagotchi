@@ -15,14 +15,6 @@ public class TamagotchiLauncher {
 
 
     public static void main(String[] args) {
-        Runnable runnable = () -> {
-            System.out.println("> Initialized " + Thread.currentThread().getName());
-        };
-
-        new Thread(runnable).start();
-
-        Thread.currentThread().setName("Thread - Service");
-
         Injector injector = Injector.create(new MainModule());
         injector.injectStaticMembers(TamagotchiLauncher.class);
 

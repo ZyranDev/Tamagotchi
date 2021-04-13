@@ -12,7 +12,7 @@ public class StorageServiceImpl implements IService {
 
     @Override
     public void start() {
-        System.out.println(" > Initializing " + Thread.currentThread().getName());
+        System.out.println("Waiting for results");
     }
 
     @Override

@@ -11,7 +11,7 @@ public class MainMenu extends SimpleMenu {
     private final Scanner scanner = new Scanner(System.in);
 
     @Inject
-    private ShopMenu shopMenu;
+    private SelectionMenu selectionMenu;
 
     private void menu() {
         Console.print(
@@ -62,19 +62,19 @@ public class MainMenu extends SimpleMenu {
         switch (petType) {
             case "CAT":
                 System.out.println("Cat");
-                shopMenu.displayMenu();
+                selectionMenu.displayMenu();
                 break;
             case "LION":
                 System.out.println("Lion");
-                shopMenu.displayMenu();
+                selectionMenu.displayMenu();
                 break;
             case "DOG":
                 System.out.println("Dog");
-                shopMenu.displayMenu();
+                selectionMenu.displayMenu();
                 break;
             case "PARROT":
                 System.out.println("Parrot");
-                shopMenu.displayMenu();
+                selectionMenu.displayMenu();
                 break;
             default:
                 Console.clearConsole();
