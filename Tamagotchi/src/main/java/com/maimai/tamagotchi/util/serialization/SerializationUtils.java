@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.utils.serialization;
+package com.maimai.tamagotchi.util.serialization;
 
 import com.google.gson.Gson;
 

@@ -1,6 +1,7 @@
-package com.maimai.tamagotchi.menu;
+package com.maimai.tamagotchi.menu.implementation;
 
-import com.maimai.tamagotchi.utils.console.Console;
+import com.maimai.tamagotchi.menu.SimpleMenu;
+import com.maimai.tamagotchi.util.console.Console;
 
 import javax.inject.Inject;
 import java.util.Scanner;
@@ -52,39 +53,35 @@ public class MainMenu extends SimpleMenu {
         Console.print(
                 "",
                 "&12. &dPlease provide your pet type:&r",
+                "",
+                "&1&lDog, Cat, Lion, Parrot, Rabbit&r",
                 "");
 
-        String petType = scanner.nextLine();
+        String petType = scanner.nextLine().toUpperCase();
 
-        switch (petType.toLowerCase()) {
-            case "cat":
+        switch (petType) {
+            case "CAT":
                 System.out.println("Cat");
                 shopMenu.displayMenu();
                 break;
-            case "lion":
+            case "LION":
                 System.out.println("Lion");
                 shopMenu.displayMenu();
                 break;
-            case "dog":
+            case "DOG":
                 System.out.println("Dog");
                 shopMenu.displayMenu();
                 break;
-            case "parrot":
+            case "PARROT":
                 System.out.println("Parrot");
                 shopMenu.displayMenu();
                 break;
             default:
+                Console.clearConsole();
                 Console.print(
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "&cPlease select a valid option!&r",
-                        "");
+                        "&1&n&l-----------------------------&r",
+                        "&c&oPlease select a valid option!&r",
+                        "&1&n&l-----------------------------&r");
                 createPet();
         }
     }

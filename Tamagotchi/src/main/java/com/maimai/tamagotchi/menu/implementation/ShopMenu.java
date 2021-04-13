@@ -1,8 +1,9 @@
-package com.maimai.tamagotchi.menu;
+package com.maimai.tamagotchi.menu.implementation;
 
 import com.maimai.tamagotchi.mascot.subject.ConsumableSubject;
-import com.maimai.tamagotchi.menu.implementation.ShopMenuData;
-import com.maimai.tamagotchi.utils.console.Console;
+import com.maimai.tamagotchi.menu.SimpleMenu;
+import com.maimai.tamagotchi.menu.data.ShopMenuData;
+import com.maimai.tamagotchi.util.console.Console;
 import me.yushust.inject.InjectAll;
 
 import java.util.function.Consumer;
