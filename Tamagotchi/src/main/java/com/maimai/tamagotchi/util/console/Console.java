@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.utils.console;
+package com.maimai.tamagotchi.util.console;
 
 import java.util.Scanner;
 

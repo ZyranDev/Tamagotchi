@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.utils;
+package com.maimai.tamagotchi.util;
 
 import java.io.*;
 

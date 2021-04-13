@@ -1,4 +1,4 @@
-package com.maimai.tamagotchi.utils.listeners;
+package com.maimai.tamagotchi.util.listeners;
 
 import com.maimai.tamagotchi.mascot.indicator.Indicator;
 
