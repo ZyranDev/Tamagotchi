@@ -2,25 +2,30 @@ package com.maimai.tamagotchi.menu.implementation;
 
 import com.maimai.tamagotchi.menu.SimpleMenu;
 import com.maimai.tamagotchi.util.console.Console;
+import me.yushust.inject.InjectAll;
+import me.yushust.inject.InjectIgnore;
 
-import javax.inject.Inject;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
+@InjectAll
 public class MainMenu extends SimpleMenu {
+
+    @InjectIgnore
     private final Scanner scanner = new Scanner(System.in);
 
-    @Inject
     private SelectionMenu selectionMenu;
+    private CreatePetMenu createPetMenu;
 
-    private void menu() {
+    @Override
+    public void displayMenu() {
         Console.print(
                 "",
-                "&1&lHello, welcome you tamagotchi",
-                "What do you want to do now?&r",
+                "&d&l¡Hola!, bienvenido a tu tamagotchi",
+                "¿Qué quieres hacer ahora?&r",
                 "",
-                "&c&l1 &d&lPlay on your tamagotchi",
-                "&c&l2 &d&lDelete your progress.&r",
+                "&b&l1 &d» &1&lJugar en tu tamagotchi.",
+                "&b&l2 &d» &1&lBorrar tu progreso. &d» &cDESHABILITADA!&r",
                 "",
                 "");
 
@@ -28,71 +33,29 @@ public class MainMenu extends SimpleMenu {
 
         switch (option) {
             case 1:
-                createPet();
+                createPetMenu.displayMenu();
                 break;
             case 2:
+                Console.print("",
+                        "&cNo se ha encontrado ningun dato!&r",
+                        "");
 
-            default:
-                System.out.println("Select an valid option");
-        }
-    }
-
-    private void createPet() {
-        Console.print(
-                "",
-                "&11. &dPlease provide a name to your pet:&r",
-                "");
-
-        String petName = scanner.nextLine();
-
-        Console.print(
-                "",
-                "&dSure your pet name is: &c&l" + petName,
-                "&r");
-
-        Console.print(
-                "",
-                "&12. &dPlease provide your pet type:&r",
-                "",
-                "&1&lDog, Cat, Lion, Parrot, Rabbit&r",
-                "");
-
-        String petType = scanner.nextLine().toUpperCase();
-
-        switch (petType) {
-            case "CAT":
-                System.out.println("Cat");
-                selectionMenu.displayMenu();
-                break;
-            case "LION":
-                System.out.println("Lion");
-                selectionMenu.displayMenu();
-                break;
-            case "DOG":
-                System.out.println("Dog");
-                selectionMenu.displayMenu();
-                break;
-            case "PARROT":
-                System.out.println("Parrot");
-                selectionMenu.displayMenu();
+                displayMenu();
                 break;
             default:
-                Console.clearConsole();
-                Console.print(
-                        "&1&n&l-----------------------------&r",
-                        "&c&oPlease select a valid option!&r",
-                        "&1&n&l-----------------------------&r");
-                createPet();
-        }
-    }
+                Console.print("",
+                        "&cSelecciona una opción valida!&r",
+                        "");
 
-    @Override
-    public void displayMenu() {
-        menu();
+                displayMenu();
+                break;
+        }
     }
 
     @Override
     public Consumer<String> listener() {
         return null;
     }
+
+
 }
