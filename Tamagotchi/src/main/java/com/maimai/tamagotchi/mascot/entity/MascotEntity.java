@@ -1,6 +1,5 @@
 package com.maimai.tamagotchi.mascot.entity;
 
-import com.maimai.tamagotchi.manager.IndicatorManager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,9 +7,8 @@ import lombok.Setter;
 @Setter
 public class MascotEntity {
 
-    private String name;
+    private String owner,
+            name;
 
     private EntityType type;
-
-    private IndicatorManager indicatorManager;
 }
