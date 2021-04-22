@@ -21,8 +21,6 @@ public enum ChatColor {
 
     private static final Map<Character, ChatColor> COLOR_MAP;
     private static final Pattern COLOR_PATTERN;
-    private final char code;
-    private final String color;
 
     static {
         COLOR_MAP = new HashMap<>();
@@ -31,6 +29,9 @@ public enum ChatColor {
             COLOR_MAP.put(chatColor.code, chatColor);
         }
     }
+
+    private final char code;
+    private final String color;
 
     ChatColor(char code, String color) {
         this.code = code;
