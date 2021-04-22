@@ -1,6 +1,7 @@
 package com.maimai.tamagotchi.mascot.entity.action.implementations;
 
 import com.maimai.tamagotchi.mascot.entity.action.ActionModel;
+import com.maimai.tamagotchi.menu.implementation.CreatePetMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ public class RabbitAction implements ActionModel {
     public void drinkAction() {
         List<String> drinkActions = new ArrayList<>();
 
-        drinkActions.add("Ummm yummy thanks, the drink was very tasty! `(*>﹏<*)´");
+        drinkActions.add("Oye, " + CreatePetMenu.getMascotEntity().getOwner() + " gracias por el awita, estaba deliciosa `(*>﹏<*)´");
         drinkActions.add("Fantastic, now I can relax a little after taking this. ( •̀ ω •́ )✧");
         drinkActions.add("なんて嬉しいんだ！マスター、本当にありがとうございます。 ヾ(≧ ▽ ≦)ゝ");
 
