@@ -7,7 +7,7 @@ import com.maimai.tamagotchi.util.serialization.SerializationUtils;
 
 public class JsonGameSession implements GameSession {
 
-    private JsonFile jsonFile;
+    private final JsonFile jsonFile;
     private MascotEntity mascotEntity;
 
     public JsonGameSession(JsonFile jsonFile) {
