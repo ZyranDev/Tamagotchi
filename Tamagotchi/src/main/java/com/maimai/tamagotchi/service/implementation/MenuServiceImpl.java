@@ -12,7 +12,12 @@ public class MenuServiceImpl implements IService {
 
     @Override
     public void start() {
-        System.out.println("Do you want open the main menu?");
+        Console.print("",
+                "&d» &a&l¿&eQuieres abrir el menu principal&a?&r",
+                "",
+                "&d» &a&lTRUE &ror &cFALSE",
+                "");
+
         boolean confirm = console.scanner.nextBoolean();
         if (confirm) mainMenu.displayMenu();
     }
