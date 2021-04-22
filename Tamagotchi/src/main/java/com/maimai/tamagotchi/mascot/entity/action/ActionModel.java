@@ -1,6 +1,7 @@
 package com.maimai.tamagotchi.mascot.entity.action;
 
 public interface ActionModel {
+
     void drinkAction();
 
     void eatAction();
