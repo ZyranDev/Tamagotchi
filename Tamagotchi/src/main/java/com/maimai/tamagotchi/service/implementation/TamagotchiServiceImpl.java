@@ -1,5 +1,6 @@
 package com.maimai.tamagotchi.service.implementation;
 
+import com.maimai.tamagotchi.TamagotchiLauncher;
 import com.maimai.tamagotchi.api.user.UserModel;
 import com.maimai.tamagotchi.service.IService;
 import com.maimai.tamagotchi.util.console.ChatColor;
@@ -9,6 +10,7 @@ import javax.inject.Named;
 
 @InjectAll
 public class TamagotchiServiceImpl implements IService {
+    private TamagotchiLauncher tamagotchiLauncher;
     private UserModel userModel;
 
     @Named("menu-service")
