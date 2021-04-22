@@ -4,7 +4,9 @@ import lombok.Getter;
 
 @Getter
 public enum ConsumableSubject {
-    MONEY("Money"), FOOD("Food"), TOY("Toy");
+    MONEY("Dinero"),
+    FOOD("Comida"),
+    TOY("Juguete");
 
     private final String name;
 
