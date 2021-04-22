@@ -9,9 +9,8 @@ import java.util.Map;
 
 public class Indicator extends SimpleStatistic {
 
-    private IndicatorLevel level;
-
     private final List<IndicatorListener> listeners = new ArrayList<>();
+    private IndicatorLevel level;
 
     public Indicator() {
     }
