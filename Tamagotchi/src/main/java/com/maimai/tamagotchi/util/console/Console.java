@@ -1,7 +1,5 @@
 package com.maimai.tamagotchi.util.console;
 
-import com.sun.istack.internal.NotNull;
-
 import java.util.Scanner;
 
 public class Console {
@@ -18,7 +16,6 @@ public class Console {
      * @see ChatColor
      */
 
-    @NotNull
     public static void print(String... text) {
         for (String str : text) {
             System.out.println(ChatColor.translateColorCodes(str));
