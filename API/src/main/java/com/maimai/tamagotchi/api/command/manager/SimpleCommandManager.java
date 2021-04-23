@@ -1,10 +1,20 @@
 package com.maimai.tamagotchi.api.command.manager;
 
-import com.maimai.tamagotchi.api.command.*;
+import com.maimai.tamagotchi.api.command.Command;
+import com.maimai.tamagotchi.api.command.CommandArgumentManager;
+import com.maimai.tamagotchi.api.command.CommandListener;
+import com.maimai.tamagotchi.api.command.CommandManager;
+import com.maimai.tamagotchi.api.command.CommandPartProvider;
+import com.maimai.tamagotchi.api.command.CommandResponse;
 import com.maimai.tamagotchi.api.command.context.CommandContext;
 import com.maimai.tamagotchi.api.exception.CommandExecutionException;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class SimpleCommandManager implements CommandManager {
 

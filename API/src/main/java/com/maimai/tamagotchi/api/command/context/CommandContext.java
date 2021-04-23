@@ -4,10 +4,6 @@ import java.util.List;
 
 public interface CommandContext {
 
-    String getCommandName();
-
-    List<String> getCommandArguments();
-
     static CommandContext parse(String string) {
         String[] args = string.split(" ");
 
@@ -24,4 +20,8 @@ public interface CommandContext {
     static CommandContext newContext(String commandName, String... args) {
         return new SimpleCommandContext(commandName, args);
     }
+
+    String getCommandName();
+
+    List<String> getCommandArguments();
 }

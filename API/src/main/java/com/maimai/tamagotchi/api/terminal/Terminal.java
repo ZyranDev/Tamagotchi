@@ -43,7 +43,7 @@ public final class Terminal {
                 throw new UnsupportedOperationException("Exception initializing terminal", e);
             }
         }).start();
-        
-       INITIALIZED = true;
+
+        INITIALIZED = true;
     }
 }

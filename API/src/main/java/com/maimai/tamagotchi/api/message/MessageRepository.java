@@ -16,6 +16,10 @@ public class MessageRepository implements CommandListener {
         addMessage("unknown-command", "Unknown command, type \"help\" to see command list.");
     }
 
+    public static CommandResponse commandResponse(String path) {
+        return new MessageCommandResponse(path);
+    }
+
     @Override
     public void listen(CommandResponse commandResponse) {
         if (commandResponse instanceof MessageCommandResponse) {
@@ -29,10 +33,6 @@ public class MessageRepository implements CommandListener {
 
     public void addMessage(String path, String message) {
         this.messages.put(Objects.requireNonNull(path), Objects.requireNonNull(message));
-    }
-
-    public static CommandResponse commandResponse(String path) {
-        return new MessageCommandResponse(path);
     }
 
     private static class MessageCommandResponse implements CommandResponse {

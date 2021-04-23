@@ -2,7 +2,11 @@ package com.maimai.tamagotchi.api.command.manager;
 
 import com.maimai.tamagotchi.api.command.CommandArgumentManager;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class CommandArgumentManagerImpl implements CommandArgumentManager {
 
@@ -16,7 +20,7 @@ public class CommandArgumentManagerImpl implements CommandArgumentManager {
         this();
 
         for (int i = 0; i < commandArgs.length; i++) {
-            addArgument(i+"", commandArgs[i]);
+            addArgument(i + "", commandArgs[i]);
         }
     }
 

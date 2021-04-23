@@ -22,14 +22,6 @@ public class TamagotchiServiceImpl implements IService {
     @Override
     public void start() {
         System.out.println(ChatColor.translateColorCodes("&r> Initializing " + Thread.currentThread().getName()));
-
-        /*Runnable runnable = () -> {
-            System.out.println(ChatColor.translateColorCodes("&r> Initializing " + Thread.currentThread().getName()));
-            storageService.start();
-        };
-
-        new Thread(runnable).start();*/
-
         menuService.start();
     }
 
